@@ -9,6 +9,7 @@ const UsersDetails = () => {
     useEffect(async () => {
         const showUserDetails = await getUserDetailsById(parms.id)
         setUsersDetails(showUserDetails)
+
     })
     return (
 
@@ -16,10 +17,10 @@ const UsersDetails = () => {
 
             <header>Name:{usersDetails.name}</header>
             <div>Email:{usersDetails.email}</div>
-            {/* <div>City: {usersDetails.address.city}</div> */}
+            <div>City: {usersDetails.address.city}</div>
             <button><Link to={"/"}>Back</Link></button>
             <button><Link to={"/UsersDetails/Posts/" + parms.id}>Post</Link></button>
-            <button>Todos</button>
+            <button><Link to={"/UsersDetails/ToDos/" + parms.id}>To Do</Link></button>
 
 
         </div>

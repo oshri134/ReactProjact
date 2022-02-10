@@ -16,9 +16,9 @@ export const getUserPostsById = async (id) => {
     return data;
 }
 
-export const addUserToDo = async (id) => {
+export const getUserToDoById = async (id) => {
     const { data } = await axios.get(`https://jsonplaceholder.typicode.com/todos?userId=${id}`);
-    console.log(data)
+
     return data;
 
 }

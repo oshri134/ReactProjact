@@ -1,12 +1,12 @@
 
-const ShowDoTo = (props) => {
+const ShowToDos = (props) => {
 
     return (
         <div>
             <div>title:{props.title}</div>
-            <div>completed: {props.body}</div>
+            <div>completed: {JSON.stringify(props.completed)}</div>
         </div>
     )
 
 }
-export default ShowDoTo
+export default ShowToDos
